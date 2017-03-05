@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "711491967595",
+    "firebase_url": "https://pinapple-d489e.firebaseio.com",
+    "project_id": "pinapple-d489e",
+    "storage_bucket": "pinapple-d489e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:711491967595:android:9a59bd6d4db2b73d",
+        "android_client_info": {
+          "package_name": "com.pineapple.dapineapple"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "711491967595-jcjr1psrr1q4br1eui90b87t92vt3pu3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaAQijU8epUXgdAUFM6B1Ee_dNVeSB200"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -16,7 +16,6 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="20dp"
-        android:textStyle="bold"
         android:text="383 S 2nd W,
         Rexburg, ID 83440
 

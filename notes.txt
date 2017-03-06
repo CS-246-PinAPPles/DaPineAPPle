@@ -1,0 +1,8 @@
+Notes:
+
+3rd party paypal-type companies:
+-Stripe
+-Square
+
+Database-
+-Firebase(research) from Bro. Falin

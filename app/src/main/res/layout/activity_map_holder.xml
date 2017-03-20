@@ -14,13 +14,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="20dp"
         android:text="383 S 2nd W,
         Rexburg, ID 83440
 
         Phone Number: (208)356-4398"
+        android:textAlignment="center"
+        android:textSize="20dp" />
 
-        />
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/map"
+            android:layout_width="400dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="200dp"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            tools:layout="@layout/activity_map_holder" />
+
 
 </RelativeLayout>

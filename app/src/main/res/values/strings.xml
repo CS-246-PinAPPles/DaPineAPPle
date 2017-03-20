@@ -19,4 +19,17 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_maps">Map</string>
+
+    <!-- Strings related to menu -->
+    <string-array name="menuitems">
+        <item>Appetizers</item>
+        <item>Sushi</item>
+        <item>Delux Sushi</item>
+        <item>Lunch Specials</item>
+        <item>Entrees</item>
+        <item>Specialty Salads</item>
+        <item>Burgers and Sandwiches</item>
+        <item>Deserts</item>
+    </string-array>
+
 </resources>

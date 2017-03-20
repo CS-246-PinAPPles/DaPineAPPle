@@ -14,4 +14,17 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    
+    <string-array name="menuitems">
+        <item>Appetizers</item>
+        <item>Sushi</item>
+        <item>Delux Sushi</item>
+        <item>Lunch Specials</item>
+        <item>Entrees</item>
+        <item>Specialty Salads</item>
+        <item>Burgers and Sandwiches</item>
+        <item>Deserts</item>
+    </string-array>
+
 </resources>

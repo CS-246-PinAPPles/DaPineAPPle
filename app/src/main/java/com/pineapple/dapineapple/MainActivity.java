@@ -91,10 +91,14 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
+            startActivity(new Intent(this, SecondMenu.class));
 
         } else if (id == R.id.nav_slideshow) {
 
-        } else if (id == R.id.nav_manage) {
+            startActivity(new Intent(this, MapsActivity.class));
+            }
+
+        else if (id == R.id.nav_manage) {
 
         }
 

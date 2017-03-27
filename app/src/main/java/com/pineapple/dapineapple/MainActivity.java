@@ -26,7 +26,8 @@ import java.net.URL;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private Button mButton = null;
+    private Button mButton;
+    private Button mSignUpBtn;
     private VideoView mVideoView;
 
     @Override
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         mButton= (Button)findViewById(R.id.logButton);
+        mSignUpBtn = (Button)findViewById(R.id.signButton);
 
         mButton.setOnClickListener(new View.OnClickListener(){
 
@@ -54,6 +56,16 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
 
                 Intent i = new Intent(view.getContext(),LoginActivity.class);
+                startActivity(i);
+            }
+        });
+
+        mSignUpBtn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(view.getContext(),EmailSignup.class);
                 startActivity(i);
             }
         });

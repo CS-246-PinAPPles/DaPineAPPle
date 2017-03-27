@@ -1,41 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.pineapple.dapineapple.LoginActivity">
+    android:layout_height="match_parent">
 
     <EditText
         android:id="@+id/emailField"
+        android:elevation="1dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:ems="10"
         android:hint="Email Address"
         android:inputType="textEmailAddress"
-        android:textAlignment="center" />
+        android:background="@drawable/email_text_style"/>
 
     <EditText
         android:id="@+id/passwordField"
+        android:elevation="1dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="50dp"
+        android:layout_marginEnd="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/emailField"
-        android:layout_centerHorizontal="true"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textAlignment="center" />
+        android:background="@drawable/password_text_style"
+        android:layout_below="@+id/emailField"
+        android:layout_alignStart="@+id/emailField" />
 
     <Button
         android:id="@+id/signInBtn"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="#f4ae3c"
+        android:textColor="#FFFFFF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/passwordField"
-        android:layout_marginTop="20dp"
         android:text="Sign In" />
+
+    <Button
+        android:id="@+id/facebookCnctBtn"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/com_facebook_blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect with Facebook"
+        android:layout_below="@+id/createAccount"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
+
+    <Button
+        android:id="@+id/createAccount"
+        android:elevation="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goToSignUp"
+        android:text="Create Account"
+        android:textColor="#1d960b"
+        android:layout_below="@+id/signInBtn"
+        android:layout_alignEnd="@+id/signInBtn"
+        android:layout_alignStart="@+id/signInBtn" />
+
+    <ImageView
+        android:id="@+id/f_facebook"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:elevation="2dp"
+        app:srcCompat="@drawable/com_facebook_button_login_logo"
+        android:scaleType="fitXY"
+        android:layout_alignTop="@+id/facebookCnctBtn"
+        android:layout_alignBottom="@+id/facebookCnctBtn"
+        android:layout_alignStart="@+id/lockIcon" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="false"
+        android:elevation="0dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/pineapple_background"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/mailIcon"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/emailField"
+        android:layout_alignTop="@+id/emailField"
+        app:srcCompat="@drawable/mail_icon"
+        android:layout_above="@+id/passwordField" />
+
+    <ImageView
+        android:id="@+id/lockIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/signInBtn"
+        android:layout_alignEnd="@+id/mailIcon"
+        android:layout_marginBottom="5dp"
+        app:srcCompat="@drawable/lock_icon" />
 
 </RelativeLayout>

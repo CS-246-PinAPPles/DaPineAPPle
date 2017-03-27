@@ -1,9 +1,11 @@
 package com.pineapple.dapineapple;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,6 +23,8 @@ import com.google.firebase.auth.FirebaseAuth;
  * @author Dillon Christensen
  */
 public class LoginActivity extends AppCompatActivity {
+
+    private static final String TAG = "Login Activity";
 
     private EditText mEmailField;
     private EditText mPasswordField;
@@ -43,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         mSigninBtn = (Button) findViewById(R.id.signInBtn);
         mSigninBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 startSignIn();
             }
         });
@@ -52,7 +56,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if (firebaseAuth.getCurrentUser() != null) {
-                    // intent user account
+                    //Intent intent = new Intent(LoginActivity.this, MapsActivity.class);
+                    //startActivity(intent);
                 }
             }
         };
@@ -74,6 +79,33 @@ public class LoginActivity extends AppCompatActivity {
             });
 
         }
+        else{
+            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
+                    if (!task.isSuccessful()) {
+                        Log.w(TAG, "signInWithEmail:failed", task.getException());
+                        Toast.makeText(LoginActivity.this, "Sign In Problem", Toast.LENGTH_LONG).show();
+                        mEmailField.setText("");
+                        mPasswordField.setText("");
+                    }
+                    else {
+                        goForward();
+                    }
+                }
+            });
+        }
+    }
+
+    protected void goForward(){
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
+
+    protected void goToSignUp(View view){
+        Intent intent = new Intent(this, EmailSignup.class);
+        startActivity(intent);
     }
 
     @Override

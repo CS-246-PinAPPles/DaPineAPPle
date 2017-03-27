@@ -1,5 +1,6 @@
 package com.pineapple.dapineapple;
 
+import android.graphics.Typeface;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -20,7 +21,7 @@ import static com.pineapple.dapineapple.R.id.map;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-
+    Typeface tv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         public void onMapReady(GoogleMap map) {
 
             LatLng rexburg = new LatLng(43.818193, -111.788888);
-            map.addMarker(new MarkerOptions().position(rexburg).title("Come Visit!").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
+            map.addMarker(new MarkerOptions().position(rexburg).title("Come Visit!").icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
             map.moveCamera(CameraUpdateFactory.newLatLng(rexburg));
             map.setMinZoomPreference(17);
             map.setIndoorEnabled(true);

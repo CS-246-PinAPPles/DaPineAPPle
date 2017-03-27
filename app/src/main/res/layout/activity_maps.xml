@@ -7,13 +7,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#f0ede5"
+        android:background="#107f19"
         android:fontFamily="casual"
         android:lineSpacingExtra="15dp"
         android:paddingTop="15dp"
         android:text="383 S 2nd W Rexburg ID 83440 \n Phone Number: (343) 454-3435\n Email: ono@pineapplegrill.com"
         android:textAlignment="center"
-        android:textColor="#565A45"
+        android:textColor="#ffffff"
         android:textSize="20dp"
         android:textStyle="bold"
 

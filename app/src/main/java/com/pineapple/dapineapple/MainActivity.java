@@ -1,7 +1,10 @@
 package com.pineapple.dapineapple;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -15,11 +18,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.VideoView;
+
+import java.net.URI;
+import java.net.URL;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private Button mButton = null;
+    private VideoView mVideoView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,17 +51,31 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        /*mButton= (Button)findViewById(R.id.mapButton);
+        mButton= (Button)findViewById(R.id.logButton);
 
         mButton.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(view.getContext(),MapsActivity.class);
+                Intent i = new Intent(view.getContext(),LoginActivity.class);
                 startActivity(i);
             }
-        });*/
+        });
+        
+        mVideoView = (VideoView) findViewById(R.id.videoView);
+        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/" + R.raw.pinebar);
+        mVideoView.setVideoURI(uri);
+        mVideoView.start();
+
+        mVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
+
+
     }
 
     @Override
@@ -97,7 +119,8 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-            startActivity(new Intent(this, SecondMenu.class));
+
+            startActivity(new Intent(this, FirstMenu.class));
 
         } else if (id == R.id.nav_slideshow) {
 

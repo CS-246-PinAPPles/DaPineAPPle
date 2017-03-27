@@ -55,6 +55,8 @@ public class EmailSignup extends AppCompatActivity {
             }
         };
 
+
+
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,7 +83,9 @@ public class EmailSignup extends AppCompatActivity {
 
 
     public void returnToSignIn(View view){
+
         Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
     private void startSignUp() {

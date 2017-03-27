@@ -19,6 +19,7 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_maps">Map</string>
+    <string name="auth_failed">User creation failed</string>
 
     <!-- Strings related to menu -->
     <string-array name="menuitems">

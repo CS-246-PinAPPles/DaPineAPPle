@@ -93,7 +93,7 @@
         android:layout_alignStart="@+id/lockIcon" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/pineappleBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:adjustViewBounds="false"

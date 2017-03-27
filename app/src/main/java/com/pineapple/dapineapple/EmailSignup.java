@@ -24,6 +24,7 @@ public class EmailSignup extends AppCompatActivity {
     EditText inputPassword;
     EditText confirmPassword;
     Button signUpBtn;
+    Button backSigninBtn;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -37,6 +38,7 @@ public class EmailSignup extends AppCompatActivity {
         inputPassword   = (EditText) findViewById(R.id.passwordInput);
         confirmPassword = (EditText) findViewById(R.id.confirmPassword);
         signUpBtn       = (Button)   findViewById(R.id.signUpButton);
+        backSigninBtn   = (Button)   findViewById(R.id.returnSignInButton);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -64,8 +66,16 @@ public class EmailSignup extends AppCompatActivity {
             }
         });
 
+        backSigninBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                returnToSignIn();
+            }
+        });
+                                         }
+
         // Write parcelable class and transfer signin info
-    }
+
 
     @Override
     protected void onStart() {
@@ -82,7 +92,7 @@ public class EmailSignup extends AppCompatActivity {
     }
 
 
-    public void returnToSignIn(View view){
+    public void returnToSignIn(){
 
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);

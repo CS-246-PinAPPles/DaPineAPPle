@@ -19,7 +19,7 @@
         android:ems="10"
         android:hint="Email Address"
         android:inputType="textEmailAddress"
-        android:background="@drawable/email_text_style"/>
+        android:background="@drawable/roundtop_edittext"/>
 
     <EditText
         android:id="@+id/passwordField"
@@ -33,7 +33,7 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:background="@drawable/password_text_style"
+        android:background="@drawable/roundbottom_edittext"
         android:layout_below="@+id/emailField"
         android:layout_alignStart="@+id/emailField" />
 
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:onClick="goToSignUp"
         android:text="Create Account"
-        android:textColor="#1d960b"
+        android:textColor="#177308"
         android:layout_below="@+id/signInBtn"
         android:layout_alignEnd="@+id/signInBtn"
         android:layout_alignStart="@+id/signInBtn" />

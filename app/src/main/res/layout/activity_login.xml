@@ -110,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/emailField"
         android:layout_alignTop="@+id/emailField"
-        app:srcCompat="@drawable/ic_action_name"
+        app:srcCompat="@drawable/mail_icon"
         android:layout_above="@+id/passwordField" />
 
     <ImageView

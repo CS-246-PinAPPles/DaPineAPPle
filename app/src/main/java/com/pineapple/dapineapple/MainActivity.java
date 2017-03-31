@@ -1,6 +1,7 @@
 package com.pineapple.dapineapple;
 
 import android.content.Intent;
+import android.graphics.Camera;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.VideoView;
 
+
 import java.net.URI;
 import java.net.URL;
 
@@ -29,10 +31,16 @@ public class MainActivity extends AppCompatActivity
     private Button mButton;
     private Button mSignUpBtn;
     private VideoView mVideoView;
+    MediaPlayer player;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -47,31 +55,32 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        mButton= (Button)findViewById(R.id.logButton);
-        mSignUpBtn = (Button)findViewById(R.id.signButton);
+        mButton = (Button) findViewById(R.id.logButton);
+        mSignUpBtn = (Button) findViewById(R.id.signButton);
 
-        mButton.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-
-                Intent i = new Intent(view.getContext(),LoginActivity.class);
-                startActivity(i);
-            }
-        });
-
-        mSignUpBtn.setOnClickListener(new View.OnClickListener(){
+        mButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(view.getContext(),EmailSignup.class);
+                Intent i = new Intent(view.getContext(), LoginActivity.class);
                 startActivity(i);
             }
         });
-        
+
+        mSignUpBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(view.getContext(), EmailSignup.class);
+                startActivity(i);
+            }
+        });
+
         mVideoView = (VideoView) findViewById(R.id.videoView);
-        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/" + R.raw.pinebar);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.pinebar);
+        mVideoView.setZOrderOnTop(false);
         mVideoView.setVideoURI(uri);
         mVideoView.start();
 
@@ -82,8 +91,18 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+    }
+
+    @Override
+    public void onDestroy(){
+
+        super.onDestroy();
+
 
     }
+
+
+
 
     @Override
     public void onBackPressed() {

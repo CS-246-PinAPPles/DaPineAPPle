@@ -54,7 +54,21 @@
             android:label="@string/title_activity_maps"
             android:theme="@android:style/Theme.Translucent"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".FirstMenu"
+            android:label="First"
+            android:theme="@style/Theme.AppCompat"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".SecondMenu"
+            android:label="Second"
+            android:theme="@style/Theme.AppCompat"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

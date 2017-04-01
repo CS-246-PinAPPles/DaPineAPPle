@@ -114,5 +114,14 @@ public class LoginActivity extends AppCompatActivity {
             mAuth.removeAuthStateListener(mAuthStateListener);
         }
     }
+
+   @Override
+    public void onBackPressed() {
+
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+
+    }
     
 }

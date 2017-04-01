@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity
     private Button mSignUpBtn;
     private VideoView mVideoView;
     MediaPlayer player;
+    int mCurrentVideoPosition;
 
 
 
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity
 
         mButton = (Button) findViewById(R.id.logButton);
         mSignUpBtn = (Button) findViewById(R.id.signButton);
+        mVideoView = (VideoView) findViewById(R.id.videoView);
 
         mButton.setOnClickListener(new View.OnClickListener() {
 
@@ -78,7 +80,13 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        mVideoView = (VideoView) findViewById(R.id.videoView);
+        videoPlay(mVideoView);
+
+    }
+
+    public void videoPlay(View v){
+
+        //mVideoView = (VideoView) findViewById(R.id.videoView);
         Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.pinebar);
         mVideoView.setZOrderOnTop(false);
         mVideoView.setVideoURI(uri);
@@ -90,14 +98,6 @@ public class MainActivity extends AppCompatActivity
                 mp.setLooping(true);
             }
         });
-
-    }
-
-    @Override
-    public void onDestroy(){
-
-        super.onDestroy();
-
 
     }
 

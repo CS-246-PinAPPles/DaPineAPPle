@@ -25,7 +25,7 @@ import com.google.firebase.auth.FirebaseAuth;
  *
  * @author Dillon Christensen
  */
-public class LoginActivity extends FragmentActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private static final String TAG = "Login Activity";
 
@@ -93,7 +93,7 @@ public class LoginActivity extends FragmentActivity {
     }
 
     protected void goForward(){
-        Intent intent = new Intent(this, MapsActivity.class);
+        Intent intent = new Intent(this, FirstMenu.class);
         startActivity(intent);
     }
 

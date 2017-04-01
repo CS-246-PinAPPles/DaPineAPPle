@@ -2,6 +2,8 @@ package com.pineapple.dapineapple;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -22,7 +24,7 @@ import com.google.firebase.auth.FirebaseAuth;
  *
  * @author Dillon Christensen
  */
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends FragmentActivity {
 
     private static final String TAG = "Login Activity";
 

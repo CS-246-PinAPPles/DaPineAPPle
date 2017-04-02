@@ -2,6 +2,8 @@ package com.pineapple.dapineapple;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -91,7 +93,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     protected void goForward(){
-        Intent intent = new Intent(this, MapsActivity.class);
+        Intent intent = new Intent(this, FirstMenu.class);
         startActivity(intent);
     }
 

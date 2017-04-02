@@ -20,7 +20,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -29,17 +30,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="EmailSignup"
+        <activity
+            android:name=".EmailSignup"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".LoginActivity"
+        <activity
+            android:name=".LoginActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -51,28 +52,28 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"
-            android:theme="@android:style/Theme.Translucent"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
         <activity
             android:name=".FirstMenu"
-            android:label="First"
-            android:theme="@style/Theme.AppCompat"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-
+            android:label="First"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".SecondMenu"
-            android:label="Second"
-            android:theme="@style/Theme.AppCompat"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
+            android:label="Second"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCWGbMm8Ikivq1Ze2lX3xkXLesKggL4kuE" />
+
+        <activity android:name=".DealActivity"></activity>
     </application>
 
 </manifest>

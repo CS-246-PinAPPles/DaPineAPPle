@@ -43,4 +43,12 @@ public class FirstMenu extends AppCompatActivity {
         });
         listView.setAdapter(mAdapter);
     }
+
+    public void onBackPressed() {
+
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+
+    }
 }
